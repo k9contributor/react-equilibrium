@@ -4,7 +4,9 @@ This tool provides an intuitive way to elegantly share state between multiple Re
 
 # Try It Out
 
-```$ npm install
-$ npm start```
+```
+$ npm install
+$ npm start
+```
 
 Observe that both components read state.  If desired, examine the Developer Tools console and inspect the source code to understand the mechanism by which state is being communicated, kept, and responsibly tracked.
