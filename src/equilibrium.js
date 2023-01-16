@@ -65,11 +65,12 @@ class Equilibrium {
 
                 if (LOG_WRITE_OPERATIONS) {
                     let eventType = (object[key] === undefined) ? 'create' : 'write';
-                    object[key] = value;
                     this.log.push({ event: eventType, key: key, value: value, time: Date.now() });
-                    this.forceUpdate(); // Or the DOM won't re-render TODO: Give the consuming developer more choice about what to update
-                    return true;
                 }
+
+                object[key] = value;
+                this.forceUpdate(); // Or the DOM won't re-render TODO: Give the consuming developer more choice about what to update
+                return true;
             }
         });
     }
